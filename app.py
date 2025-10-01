@@ -77,7 +77,7 @@ def handle_message(event):
 
     # 如果最後是「導航」 → 多點導航
     if user_msg.endswith("導航") and nav_links:
-        route_url = "https://www.google.com/maps/dir/" + "/".join(nav_links)
+        route_url = "https://www.google.com/maps/dir/current+location/" + "/".join(nav_links)
         replies.append(f"📍 路線規劃：{route_url}")
 
     if not replies:
